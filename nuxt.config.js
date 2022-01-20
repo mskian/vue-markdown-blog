@@ -186,6 +186,7 @@ export default {
   },
   sitemap: {
     hostname: 'https://tamilkavithai.netlify.app',
+    trailingSlash: true,
     routes() {
       return getRoutes()
     },
