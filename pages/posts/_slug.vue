@@ -7,6 +7,12 @@
             <h1>{{ article.title }}</h1>
             <hr />
             <nuxt-content :document="article" />
+            <br />
+            <b
+              ><p v-for="tag in article.tags" :key="tag" class="is-size-6">
+                Tagged: <nuxt-link :to="'/tag/' + tag">{{ tag }}</nuxt-link>
+              </p></b
+            >
             <hr />
             <a href="" class="button is-info" @click.prevent="$router.back()"
               >Back</a
