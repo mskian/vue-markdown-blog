@@ -4,13 +4,15 @@
       <div class="columns is-centered">
         <div class="column is-half post-content">
           <br />
-          <h1 class="has-text-centered">Kavithai World 🦄</h1>
+          <h1 class="has-text-centered">Just Kavithai 🦄</h1>
           <br />
-          <pre>Read Random Kavithai in online and Offline Mode 📕</pre>
+          <pre>
+Random Kavithai Collection - Read in online and Offline Mode 📕</pre
+          >
           <hr />
-          <p>📝 Copy Kavithai Around Social Media profiles and pages</p>
+          <p>📝 Collect Kavithai From Social Media profiles and pages</p>
           <p>
-            📦 Pull Content via Markdown Post Format -
+            📦 Push Content via Markdown Post Format -
             <nuxt-link to="/blog/">Read kavithai</nuxt-link>
           </p>
           <p>
@@ -18,6 +20,29 @@
             Quotes
           </p>
           <p>🛍 Build using Nuxt Static Generator + PWA offline Support</p>
+          <br />
+          <p class="has-text-centered">
+            <client-only>
+              <unicon
+                name="vuejs"
+                fill="limegreen"
+                width="50"
+                height="50"
+              ></unicon>
+              <unicon
+                name="cloud-heart"
+                fill="red"
+                width="50"
+                height="50"
+              ></unicon>
+              <unicon
+                name="medium-m"
+                fill="orange"
+                width="50"
+                height="50"
+              ></unicon>
+            </client-only>
+          </p>
           <hr />
         </div>
       </div>

@@ -6,6 +6,18 @@
           <br />
           <div class="card">
             <div class="card-content">
+              <div class="has-text-centered">
+                <client-only>
+                  <unicon
+                    name="envelope-check"
+                    fill="pink"
+                    width="50"
+                    height="50"
+                  ></unicon>
+                </client-only>
+              </div>
+              <h2 class="has-text-centered is-size-5">Kavithai Collections</h2>
+              <br />
               <div v-for="post of posts" :key="post.slug" class="is-size-6">
                 <h2>{{ post.title }}</h2>
                 <br />
