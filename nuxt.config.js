@@ -185,7 +185,7 @@ export default {
     fallback: true,
   },
   sitemap: {
-    hostname: 'https://tamilkavithai.netlify.app',
+    hostname: 'https://tamilkavithai.netlify.app/',
     trailingSlash: true,
     routes() {
       return getRoutes()
