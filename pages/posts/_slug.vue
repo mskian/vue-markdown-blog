@@ -10,7 +10,7 @@
             <br />
             <b
               ><p v-for="tag in article.tags" :key="tag" class="is-size-6">
-                Tagged: <nuxt-link :to="'/tag/' + tag">{{ tag }}</nuxt-link>
+                Tagged: <nuxt-link :to="'/tag/' + tag + '/'">{{ tag }}</nuxt-link>
               </p></b
             >
             <hr />
