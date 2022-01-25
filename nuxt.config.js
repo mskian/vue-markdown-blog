@@ -208,7 +208,7 @@ export default {
           'Just a Random Tamil Kavithai Site Collect kavithai Around Social Media and Blogs.',
         link: baseUrlArticles,
       }
-      const articles = await $content({ deep: true }).fetch()
+      const articles = await $content('articles').fetch()
 
       articles.forEach((article) => {
         const url = `https://pwa.tamilwords.net/posts/${article.slug}/`
