@@ -78,6 +78,7 @@ export default {
         sizes: '512x512',
         href: '/icons/Icon-512x512.png',
       },
+      { rel: 'dns-prefetch', href: 'https://identity.netlify.com' },
     ],
   },
   loading: { color: '#e84b0d' },

@@ -83,6 +83,12 @@ export default {
           content: this.tag.description,
         },
       ],
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://pwa.tamilwords.net' + this.$route.path + '/',
+        },
+      ],
     }
   },
 }

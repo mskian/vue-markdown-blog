@@ -70,6 +70,12 @@ export default {
             'Just a Random Tamil Kavithai Site Collect kavithai Around Social Media and Blogs.',
         },
       ],
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://pwa.tamilwords.net' + this.$route.path + '/',
+        },
+      ],
     }
   },
 }

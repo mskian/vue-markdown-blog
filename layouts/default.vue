@@ -51,12 +51,6 @@ export default {
   },
   head() {
     return {
-      link: [
-        {
-          rel: 'canonical',
-          href: 'https://pwa.tamilwords.net' + this.$route.path + '/',
-        },
-      ],
       script: [
         { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
       ],
@@ -65,7 +59,7 @@ export default {
   mounted() {
     /* eslint-disable no-console */
     console.log(
-      '%cWe ❤︎ open source!',
+      '%cJust ❤︎ Kavithai!',
       'background-color:white;padding:8px 16px;border-radius:8px;font-size:32px;color:red;'
     )
   },

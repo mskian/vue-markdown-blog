@@ -33,5 +33,5 @@ jobs:
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4.13.1
         with:
-          commit_message: Update Post Markdown Data
+          commit_message: Format Post Markdown Data
           commit_author: GitHub Actions <actions@github.com>

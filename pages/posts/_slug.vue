@@ -97,6 +97,12 @@ export default {
           content: 'https://pwa.tamilwords.net' + this.$route.path,
         },
       ],
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://pwa.tamilwords.net' + this.$route.path + '/',
+        },
+      ],
     }
   },
 }

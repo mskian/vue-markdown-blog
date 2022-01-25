@@ -12,13 +12,10 @@ Random Kavithai Collection - Read in online and Offline Mode 📕</pre
           <hr />
           <p>📝 Collect Kavithai From Social Media profiles and pages</p>
           <p>
-            📦 Push Content via Markdown Post Format -
+            📦 Push Content via Netlify CMS with Markdown Post Format -
             <nuxt-link to="/blog/">Read kavithai</nuxt-link>
           </p>
-          <p>
-            💚 it's for Personal Use - Collecting Tamil Kavithai and Tamil
-            Quotes
-          </p>
+          <p>💚 Share My Favourite Tamil Kavithai and Tamil Quotes</p>
           <p>🛍 Build using Nuxt Static Generator + PWA offline Support</p>
           <br />
           <p class="has-text-centered">
@@ -53,5 +50,15 @@ Random Kavithai Collection - Read in online and Offline Mode 📕</pre
 <script>
 export default {
   name: 'HomePage',
+  head() {
+    return {
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://pwa.tamilwords.net/',
+        },
+      ],
+    }
+  },
 }
 </script>
