@@ -1,0 +1,5 @@
+# Netlify redirects file, edit with your domain
+# https://www.netlify.com/docs/redirects/
+
+https://tamilkavithai.netlify.app/* https://pwa.tamilwords.net/:splat 301!
+http://tamilkavithai.netlify.app/* https://pwa.tamilwords.net/:splat 301!

@@ -69,12 +69,12 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: 'https://tamilkavithai.netlify.app/kavithai-cover.png',
+          content: 'https://pwa.tamilwords.net/kavithai-cover.png',
         },
         {
           hid: 'og:url',
           property: 'og:url',
-          content: 'https://tamilkavithai.netlify.app' + this.$route.path,
+          content: 'https://pwa.tamilwords.net' + this.$route.path,
         },
         {
           hid: 'twitter:title',
@@ -89,12 +89,12 @@ export default {
         {
           hid: 'twitter:image',
           name: 'twitter:image',
-          content: 'https://tamilkavithai.netlify.app/kavithai-cover.png',
+          content: 'https://pwa.tamilwords.net/kavithai-cover.png',
         },
         {
           hid: 'twitter:url',
           name: 'twitter:url',
-          content: 'https://tamilkavithai.netlify.app' + this.$route.path,
+          content: 'https://pwa.tamilwords.net' + this.$route.path,
         },
       ],
     }

@@ -185,14 +185,14 @@ export default {
     fallback: true,
   },
   sitemap: {
-    hostname: 'https://tamilkavithai.netlify.app/',
+    hostname: 'https://pwa.tamilwords.net/',
     trailingSlash: true,
     routes() {
       return getRoutes()
     },
   },
   feed() {
-    const baseUrlArticles = `https://tamilkavithai.netlify.app/blog/`
+    const baseUrlArticles = `https://pwa.tamilwords.net/blog/`
     const baseLinkFeedArticles = '/posts'
     const feedFormats = {
       rss: { type: 'rss2', file: 'rss.xml' },
@@ -211,7 +211,7 @@ export default {
       const articles = await $content({ deep: true }).fetch()
 
       articles.forEach((article) => {
-        const url = `https://tamilkavithai.netlify.app/posts/${article.slug}/`
+        const url = `https://pwa.tamilwords.net/posts/${article.slug}/`
 
         feed.addItem({
           title: article.title,

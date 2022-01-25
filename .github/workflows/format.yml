@@ -2,7 +2,7 @@ name: format
 on:
   push:
     paths:
-    - 'content/**'
+      - 'content/**'
     branches:
       - main
 
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ '14' ]
+        node: ['14']
     name: Node ${{ matrix.node }}
     steps:
       - uses: actions/checkout@v2.4.0
@@ -20,7 +20,7 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: | 
+          restore-keys: |
             ${{ runner.OS }}-build-${{ env.cache-name }}-
             ${{ runner.OS }}-build-
             ${{ runner.OS }}-
@@ -33,5 +33,5 @@ jobs:
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4.13.1
         with:
-         commit_message: Update Post Markdown Data
-         commit_author: GitHub Actions <actions@github.com> 
+          commit_message: Update Post Markdown Data
+          commit_author: GitHub Actions <actions@github.com>

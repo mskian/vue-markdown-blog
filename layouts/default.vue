@@ -54,7 +54,7 @@ export default {
       link: [
         {
           rel: 'canonical',
-          href: 'https://tamilkavithai.netlify.app' + this.$route.path + '/',
+          href: 'https://pwa.tamilwords.net' + this.$route.path + '/',
         },
       ],
       script: [
