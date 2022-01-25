@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: editorial_workflow
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: 'Kavithai'
+    label: 'Kavithai'
+    folder: 'content/articles'
+    format: 'frontmatter'
+    slug: 'kavithai-{{year}}-{{day}}-{{minute}}{{second}}'
+    create: true
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Tags', name: 'tags', widget: 'list', default: ['kavithai'] }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
