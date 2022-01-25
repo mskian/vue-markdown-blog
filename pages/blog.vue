@@ -49,7 +49,7 @@
 export default {
   name: 'BlogPage',
   async asyncData({ $content }) {
-    const postdata = await $content({ deep: true })
+    const postdata = await $content('articles')
       .only(['author', 'createdAt', 'description', 'path', 'title', 'slug'])
       .sortBy('createdAt', 'desc')
       .limit(3)

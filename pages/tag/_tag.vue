@@ -16,7 +16,11 @@
                   ></unicon>
                 </client-only>
               </div>
+              <h1 class="has-text-centered">
+                {{ tag.name }}
+              </h1>
               <br />
+              <nuxt-content :document="tag" />
               <span
                 v-for="article of articles"
                 :key="article.slug"
@@ -45,27 +49,38 @@
 export default {
   name: 'TagPage',
   async asyncData({ $content, params, error }) {
-    if (!params.slug) {
+    if (!params.tag) {
       return error({ statusCode: 404, message: 'No posts found!' })
     }
-    const articles = await $content('articles')
-      .where({
-        tags: { $contains: params.slug },
-      })
-      .fetch()
-    return {
-      articles,
+    try {
+      const tags = await $content('tags')
+        .where({ slug: { $contains: params.tag } })
+        .limit(1)
+        .fetch()
+      const tag = tags.length > 0 ? tags[0] : {}
+      if (!tag.name) {
+        return error({ statusCode: 404, message: 'No posts found!' })
+      }
+      const articles = await $content('articles')
+        .where({ tags: { $contains: tag.name } })
+        .sortBy('createdAt', 'asc')
+        .fetch()
+      return {
+        articles,
+        tag,
+      }
+    } catch {
+      error({ statusCode: 404, message: 'Post not found' })
     }
   },
   head() {
     return {
-      title: 'Post Tag',
+      title: 'Tagged: ' + this.tag.name,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content:
-            'Just a Random Tamil Kavithai Site Collect kavithai Around Social Media and Blogs.',
+          content: this.tag.description,
         },
       ],
     }

@@ -58,7 +58,7 @@ export default {
     if (!pageNo) {
       return error({ statusCode: 404, message: 'No posts found!' })
     }
-    const postdata = await $content({ deep: true })
+    const postdata = await $content('articles')
       .only(['author', 'createdAt', 'description', 'path', 'title', 'slug'])
       .sortBy('createdAt', 'desc')
       .limit(3)
