@@ -74,7 +74,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content: 'https://pwa.tamilwords.net' + this.$route.path,
+          content: 'https://pwa.tamilwords.net' + this.$route.path + '/',
         },
         {
           hid: 'twitter:title',
@@ -94,7 +94,7 @@ export default {
         {
           hid: 'twitter:url',
           name: 'twitter:url',
-          content: 'https://pwa.tamilwords.net' + this.$route.path,
+          content: 'https://pwa.tamilwords.net' + this.$route.path + '/',
         },
       ],
       link: [
