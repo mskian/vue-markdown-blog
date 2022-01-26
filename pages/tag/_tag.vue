@@ -82,11 +82,31 @@ export default {
           name: 'description',
           content: this.tag.description,
         },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: 'Tagged: ' + this.tag.name,
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://kavithai.site' + this.$route.path,
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: 'Tagged: ' + this.tag.name,
+        },
+        {
+          hid: 'twitter:url',
+          name: 'twitter:url',
+          content: 'https://kavithai.site' + this.$route.path,
+        },
       ],
       link: [
         {
           rel: 'canonical',
-          href: 'https://pwa.tamilwords.net' + this.$route.path + '/',
+          href: 'https://kavithai.site' + this.$route.path,
         },
       ],
     }

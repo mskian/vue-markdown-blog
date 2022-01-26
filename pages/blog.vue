@@ -61,19 +61,72 @@ export default {
   },
   head() {
     return {
-      title: 'Blog - Just Random Kavithai',
+      title: 'Blog - தமிழ் கவிதை Site 💚',
       meta: [
         {
           hid: 'description',
           name: 'description',
           content:
-            'Just a Random Tamil Kavithai Site Collect kavithai Around Social Media and Blogs.',
+            'தமிழ் கவிதைகள் Site - Collect kavithai Around Social Media and Social Pages - Read Tamil Kavithai both online and offline.',
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: 'Blog - தமிழ் கவிதை Site 💚',
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://kavithai.site' + this.$route.path,
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: 'Blog - தமிழ் கவிதை Site 💚',
+        },
+        {
+          hid: 'twitter:url',
+          name: 'twitter:url',
+          content: 'https://kavithai.site' + this.$route.path,
         },
       ],
       link: [
         {
           rel: 'canonical',
-          href: 'https://pwa.tamilwords.net' + this.$route.path + '/',
+          href: 'https://kavithai.site' + this.$route.path,
+        },
+      ],
+      script: [
+        {
+          type: 'application/ld+json',
+          json: {
+            '@context': 'http://schema.org',
+            '@type': 'Website',
+            publisher: {
+              '@type': 'Organization',
+              name: 'Blog - தமிழ் கவிதை Site 💚',
+              url: 'https://kavithai.site' + this.$route.path,
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://kavithai.site/icons/Icon-72x72.png',
+                width: 72,
+                height: 72,
+              },
+            },
+            url: 'https://kavithai.site' + this.$route.path,
+            image: {
+              '@type': 'ImageObject',
+              url: 'https://kavithai.site/kavithai-cover.png',
+              width: 1200,
+              height: 630,
+            },
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': 'https://kavithai.site' + this.$route.path,
+            },
+            description:
+              'தமிழ் கவிதைகள் Site - Collect kavithai Around Social Media and Social Pages - Read Tamil Kavithai both online and offline.',
+          },
         },
       ],
     }

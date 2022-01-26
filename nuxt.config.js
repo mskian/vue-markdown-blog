@@ -6,7 +6,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Just Random Tamil Kavithai',
+    title: 'தமிழ் கவிதை Site 💚',
     meta: [
       // { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -22,7 +22,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Just a Random Tamil Kavithai Site Collect kavithai Around Social Media and Blogs.',
+          'தமிழ் கவிதைகள் Site - Collect kavithai Around Social Media and Social Pages - Read Tamil Kavithai both online and offline.',
       },
       { name: 'format-detection', content: 'telephone=no' },
       {
@@ -31,7 +31,7 @@ export default {
       },
       {
         name: 'application-name',
-        content: 'Just kavithai',
+        content: 'kavithai Site',
       },
       {
         name: 'apple-mobile-web-app-capable',
@@ -43,7 +43,79 @@ export default {
       },
       {
         name: 'apple-mobile-web-app-title',
-        content: 'Just kavithai',
+        content: 'kavithai Site',
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'தமிழ் கவிதை Site 💚',
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'தமிழ் கவிதை Site 💚',
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          'தமிழ் கவிதைகள் Site - Collect kavithai Around Social Media and Social Pages - Read Tamil Kavithai both online and offline.',
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://kavithai.site/kavithai-cover.png',
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://kavithai.site/',
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'தமிழ் கவிதை Site 💚',
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content:
+          'தமிழ் கவிதைகள் Site - Collect kavithai Around Social Media and Social Pages - Read Tamil Kavithai both online and offline.',
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://kavithai.site/kavithai-cover.png',
+      },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: 'https://kavithai.site/',
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      {
+        hid: 'twitter:site',
+        name: 'twitter:site',
+        content: '@tamilsmsblog',
+      },
+      {
+        hid: 'twitter:creator',
+        name: 'twitter:creator',
+        content: '@tamilsmsblog',
+      },
+      {
+        hid: 'twitter:label1',
+        name: 'twitter:label1',
+        content: 'Written by',
+      },
+      {
+        hid: 'twitter:data1',
+        name: 'twitter:data1',
+        content: '@tamilsmsblog',
       },
     ],
     link: [
@@ -113,22 +185,18 @@ export default {
     materialDesignIcons: false,
   },
   meta: {
-    ogTitle: false,
-    ogDescription: false,
-    ogSiteName: false,
-    ogType: false,
-    name: 'Just Random Tamil Kavithai',
+    name: 'தமிழ் கவிதை Site 💚',
     description:
-      'Just a Random Tamil Kavithai Site Collect kavithai Around Social Media and Blogs.',
+      'தமிழ் கவிதைகள் Site - Collect kavithai Around Social Media and Social Pages - Read Tamil Kavithai both online and offline.',
   },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     icon: false,
     manifest: {
-      name: 'Just Kavithai',
-      short_name: 'Just Kavithai',
+      name: 'Kavithai',
+      short_name: 'Kavithai',
       description:
-        'Just a Random Tamil Kavithai Site Collect kavithai Around Social Media and Blogs.',
+        'Tamil Kavithai Site - Collect kavithai Around Social Media and Social Pages - Read Tamil Kavithai both online and offline.',
       icons: [
         {
           src: '/icons/Icon-48x48.png',
@@ -186,14 +254,14 @@ export default {
     fallback: true,
   },
   sitemap: {
-    hostname: 'https://pwa.tamilwords.net/',
+    hostname: 'https://kavithai.site/',
     trailingSlash: true,
     routes() {
       return getRoutes()
     },
   },
   feed() {
-    const baseUrlArticles = `https://pwa.tamilwords.net/blog/`
+    const baseUrlArticles = `https://kavithai.site/blog/`
     const baseLinkFeedArticles = '/posts'
     const feedFormats = {
       rss: { type: 'rss2', file: 'rss.xml' },
@@ -204,15 +272,15 @@ export default {
 
     const createFeedArticles = async function (feed) {
       feed.options = {
-        title: 'Just Random Tamil Kavithai',
+        title: 'Tamil Kavithai Site',
         description:
-          'Just a Random Tamil Kavithai Site Collect kavithai Around Social Media and Blogs.',
+          'தமிழ் கவிதைகள் Site - Collect kavithai Around Social Media and Social Pages - Read Tamil Kavithai both online and offline.',
         link: baseUrlArticles,
       }
       const articles = await $content('articles').fetch()
 
       articles.forEach((article) => {
-        const url = `https://pwa.tamilwords.net/posts/${article.slug}/`
+        const url = `https://kavithai.site/posts/${article.slug}/`
 
         feed.addItem({
           title: article.title,

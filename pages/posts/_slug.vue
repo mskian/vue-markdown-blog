@@ -69,12 +69,12 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: 'https://pwa.tamilwords.net/kavithai-cover.png',
+          content: 'https://kavithai.site/kavithai-cover.png',
         },
         {
           hid: 'og:url',
           property: 'og:url',
-          content: 'https://pwa.tamilwords.net' + this.$route.path + '/',
+          content: 'https://kavithai.site' + this.$route.path,
         },
         {
           hid: 'twitter:title',
@@ -89,18 +89,68 @@ export default {
         {
           hid: 'twitter:image',
           name: 'twitter:image',
-          content: 'https://pwa.tamilwords.net/kavithai-cover.png',
+          content: 'https://kavithai.site/kavithai-cover.png',
         },
         {
           hid: 'twitter:url',
           name: 'twitter:url',
-          content: 'https://pwa.tamilwords.net' + this.$route.path + '/',
+          content: 'https://kavithai.site' + this.$route.path,
         },
       ],
       link: [
         {
           rel: 'canonical',
-          href: 'https://pwa.tamilwords.net' + this.$route.path + '/',
+          href: 'https://kavithai.site' + this.$route.path,
+        },
+      ],
+      script: [
+        {
+          type: 'application/ld+json',
+          json: {
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            publisher: {
+              '@type': 'Organization',
+              name: 'Tamil Kavithai Site',
+              url: 'https://kavithai.site' + this.$route.path,
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://kavithai.site/icons/Icon-72x72.png',
+                width: 72,
+                height: 72,
+              },
+            },
+            author: {
+              '@type': 'Person',
+              name: 'Editorial Staff',
+              image: {
+                '@type': 'ImageObject',
+                url: 'https://www.gravatar.com/avatar/a3425a2c334972ab5dde3c218307cbdd?s=250&d=mm&r=x',
+                width: 250,
+                height: 250,
+              },
+              sameAs: [
+                'https://www.facebook.com/tamilsmsblog',
+                'https://twitter.com/tamilsmsblog',
+              ],
+            },
+            headline: this.article.title,
+            url: 'https://kavithai.site' + this.$route.path,
+            datePublished: this.article.createdAt,
+            dateModified: this.article.updatedAt,
+            image: {
+              '@type': 'ImageObject',
+              url: 'https://kavithai.site/kavithai-cover.png',
+              width: 1200,
+              height: 630,
+            },
+            keywords: this.article.tags,
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': 'https://kavithai.site' + this.$route.path,
+            },
+            description: this.article.description,
+          },
         },
       ],
     }

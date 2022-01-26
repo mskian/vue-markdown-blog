@@ -4,7 +4,7 @@
       <div class="container">
         <div class="navbar-brand is-family-secondary">
           <nuxt-link to="/" class="navbar-item">
-            <h1 class="is-size-4">Just Kavithai</h1>
+            <h1 class="is-size-4">Kavithai Site</h1>
           </nuxt-link>
           <!-- @click handler goes here, make sure to scroll a bit to see it. -->
           <a

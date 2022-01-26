@@ -81,13 +81,33 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'Just a Random Tamil Kavithai Site Collect kavithai Around Social Media and Blogs.',
+            'தமிழ் கவிதைகள் Site - Collect kavithai Around Social Media and Social Pages - Read Tamil Kavithai both online and offline.',
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: 'Random Kavithai - Page ' + this.pageNo,
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://kavithai.site' + this.$route.path,
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: 'Random Kavithai - Page ' + this.pageNo,
+        },
+        {
+          hid: 'twitter:url',
+          name: 'twitter:url',
+          content: 'https://kavithai.site' + this.$route.path,
         },
       ],
       link: [
         {
           rel: 'canonical',
-          href: 'https://pwa.tamilwords.net' + this.$route.path + '/',
+          href: 'https://kavithai.site' + this.$route.path,
         },
       ],
     }
