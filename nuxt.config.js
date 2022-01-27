@@ -26,6 +26,10 @@ export default {
       },
       { name: 'format-detection', content: 'telephone=no' },
       {
+        name: 'google-site-verification',
+        content: 'QxmvHhutMiGiMrpbxSdTotoptJfbSqQuKC_nKXSISsQ',
+      },
+      {
         name: 'mobile-web-app-capable',
         content: 'yes',
       },
