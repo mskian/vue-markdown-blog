@@ -3,10 +3,55 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-half post-content">
-          <br />
           <h1 class="has-text-centered">தமிழ் கவிதை Site 🦄</h1>
-          <br />
-          <p>Random Kavithai Collection - Read in online and Offline Mode 📕</p>
+          <hr />
+          <div class="columns is-mobile">
+            <div class="column">
+              <nuxt-link to="/tag/life/">
+                <nuxt-img
+                  preload
+                  format="webp"
+                  src="images/life.png"
+                  alt="Tamil Life Quotes"
+                  height="120"
+                  width="120"
+                />
+              </nuxt-link>
+              <p>
+                <small><b>Tamil Life Quotes</b></small>
+              </p>
+            </div>
+            <div class="column">
+              <nuxt-link to="/tag/motivation/">
+                <nuxt-img
+                  preload
+                  format="webp"
+                  src="images/motivation.png"
+                  alt="Tamil Motivational Quotes"
+                  height="120"
+                  width="120"
+                />
+              </nuxt-link>
+              <p>
+                <small><b>Tamil Motivation</b></small>
+              </p>
+            </div>
+            <div class="column">
+              <nuxt-link to="/tag/kadhal/">
+                <nuxt-img
+                  preload
+                  format="webp"
+                  src="images/love.png"
+                  alt="Tamil Love Quotes"
+                  height="120"
+                  width="120"
+                />
+              </nuxt-link>
+              <p>
+                <small><b>Kadhal Kavithai</b></small>
+              </p>
+            </div>
+          </div>
           <hr />
           <p>📝 Collect Kavithai From Social Media profiles and pages</p>
           <p>📦 Push Content via Netlify CMS with Markdown Post Format</p>
@@ -41,6 +86,14 @@
               ></unicon>
             </client-only>
           </p>
+          <p class="has-text-centered">
+            <small
+              ><b>
+                Random Kavithai Collections - Read in online and Offline Mode 📕
+              </b></small
+            >
+          </p>
+          <br />
           <div v-if="$nuxt.isOffline"><pre>App Status: offline</pre></div>
           <div v-if="$nuxt.isOnline"><pre>App Status: online</pre></div>
           <hr />

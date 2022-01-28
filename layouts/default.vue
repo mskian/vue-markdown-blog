@@ -1,10 +1,15 @@
 <template>
   <div>
-    <header class="navbar is-fixed-top is-transparent is-spaced">
+    <div class="navbar is-fixed-top is-transparent">
       <div class="container">
         <div class="navbar-brand is-family-secondary">
           <nuxt-link to="/" class="navbar-item">
-            <h1 class="is-size-4">Kavithai Site</h1>
+            <nuxt-img
+              preload
+              format="webp"
+              src="icons/Icon-72x72.png"
+              alt="Kavithai Site"
+            />
           </nuxt-link>
           <!-- @click handler goes here, make sure to scroll a bit to see it. -->
           <a
@@ -32,7 +37,7 @@
           </nav>
         </div>
       </div>
-    </header>
+    </div>
     <br />
     <br />
     <Nuxt />
@@ -308,20 +313,20 @@ table th {
   text-transform: uppercase;
 }
 .navbar {
-  background-color: #ffd900;
+  background-color: #a4c400;
   margin-bottom: 30px;
   font-weight: 700;
 }
 .navbar a {
   text-transform: uppercase;
   font-weight: bold;
-  color: #5a5a5a;
+  color: #5f5f56;
   padding-left: 10px;
   padding-right: 10px;
 }
 .navbar-burger > span {
   height: 5px;
-  background-color: #6a67ce;
+  background-color: #1874ec;
 }
 a.navbar-item {
   font-weight: 700;
