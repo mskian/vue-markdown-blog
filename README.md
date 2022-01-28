@@ -1,25 +1,10 @@
-# Just Kavithai
+# தமிழ் கவிதை Site 💚
 
-![build-test](https://github.com/mskian/vue-markdown-blog/workflows/build-test/badge.svg)
+![build-test](https://github.com/mskian/vue-markdown-blog/workflows/build-test/badge.svg) ![build-test](https://github.com/mskian/vue-markdown-blog/workflows/format/badge.svg)  
 
-Just a Random Tamil Kavithai Site Collect kavithai Around Social Media and Blogs.
+தமிழ் கவிதைகள் Site - Collect kavithai Around Social Media and Social Pages - Read Tamil Kavithai both online and offline.  
 
-## Build Setup
-
-```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
+🦄 Vue.js + Nuxt.js + Markdown+ Netlify CMS + PWA 💚  
 
 ## LICENSE
 

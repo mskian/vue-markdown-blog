@@ -57,7 +57,10 @@
           <p>📦 Push Content via Netlify CMS with Markdown Post Format</p>
           <p>
             💚 Share My Favourite
-            <nuxt-link to="/posts/kavithai-2022-27-1218/">தமிழ் கவிதை</nuxt-link> and Tamil Quotes
+            <nuxt-link to="/posts/kavithai-2022-27-1218/"
+              >தமிழ் கவிதை</nuxt-link
+            >
+            and Tamil Quotes
           </p>
           <p>🛍 Build using Nuxt Static Generator + PWA offline Support</p>
           <br />
