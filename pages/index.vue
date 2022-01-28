@@ -53,14 +53,17 @@
             </div>
           </div>
           <hr />
-          <p>📝 Collect Kavithai From Social Media profiles and pages</p>
+          <p>📝 கலெக்ட் கவிதை From Social Media profiles and pages</p>
           <p>📦 Push Content via Netlify CMS with Markdown Post Format</p>
-          <p>💚 Share My Favourite Tamil Kavithai and Tamil Quotes</p>
+          <p>
+            💚 Share My Favourite
+            <nuxt-link to="/blog/">தமிழ் கவிதை</nuxt-link> and Tamil Quotes
+          </p>
           <p>🛍 Build using Nuxt Static Generator + PWA offline Support</p>
           <br />
           <div class="has-text-centered">
-            <nuxt-link to="/blog/" class="button is-rounded is-link"
-              >📚 Read kavithai</nuxt-link
+            <nuxt-link to="/blog/" class="button is-rounded read-random"
+              >📚 கவிதைகள்</nuxt-link
             >
           </div>
           <hr />
@@ -93,9 +96,6 @@
               </b></small
             >
           </p>
-          <br />
-          <div v-if="$nuxt.isOffline"><pre>App Status: offline</pre></div>
-          <div v-if="$nuxt.isOnline"><pre>App Status: online</pre></div>
           <hr />
         </div>
       </div>

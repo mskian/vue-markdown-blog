@@ -77,11 +77,11 @@ export default {
   height: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(106, 9, 231, 0.302);
+  background-color: #172a3a;
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(247, 18, 189, 0.5);
+  background-color: #74b3ce;
 }
 html,
 body {
@@ -313,7 +313,7 @@ table th {
   text-transform: uppercase;
 }
 .navbar {
-  background-color: #a4c400;
+  background-color: #09bc8a;
   margin-bottom: 30px;
   font-weight: 700;
 }
@@ -326,14 +326,33 @@ table th {
 }
 .navbar-burger > span {
   height: 5px;
-  background-color: #1874ec;
+  background-color: #e5e90f;
 }
 a.navbar-item {
   font-weight: 700;
   font-size: 14px;
 }
-
 .navbar-menu {
   padding-right: 1em;
+}
+.read-random {
+  display: flex;
+  flex-grow: 0.3;
+  font-family: 'Fira Code', monospace;
+  font-weight: 800;
+  font-size: 16px;
+  background: #172a3a;
+  color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 32px;
+  padding: 10px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
+}
+.read-random:hover {
+  color: white;
+  text-decoration: none;
 }
 </style>
