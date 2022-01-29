@@ -99,6 +99,24 @@
               </b></small
             >
           </p>
+          <div>
+            <br />
+            <div class="has-text-centered">
+              <p class="has-text-centered">
+                <small
+                  ><b>Theme Mode: {{ $colorMode.value }}</b></small
+                >
+              </p>
+              <div class="select is-rounded is-link is-small">
+                <select v-model="$colorMode.preference">
+                  <option value="system">System</option>
+                  <option value="light">Light</option>
+                  <option value="dark">Dark</option>
+                  <option value="sepia">Sepia</option>
+                </select>
+              </div>
+            </div>
+          </div>
           <hr />
         </div>
       </div>

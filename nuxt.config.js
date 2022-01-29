@@ -169,22 +169,19 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/feed',
+    '@nuxtjs/color-mode',
+    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
-    // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    '@nuxt/image',
+    '@nuxtjs/feed',
+    '@nuxtjs/sitemap',
   ],
   buefy: {
     materialDesignIcons: false,

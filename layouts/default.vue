@@ -355,4 +355,73 @@ a.navbar-item {
   color: white;
   text-decoration: none;
 }
+.dark-mode .read-random {
+  display: flex;
+  flex-grow: 0.3;
+  font-family: 'Fira Code', monospace;
+  font-weight: 800;
+  font-size: 16px;
+  background: #eb90e6;
+  color: #3d3636;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 32px;
+  padding: 10px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
+}
+.dark-mode .read-random:hover {
+  color: rgb(18, 34, 36);
+  text-decoration: none;
+}
+.dark-mode body {
+  background-color: #091a28;
+  color: #ebf4f1;
+}
+.dark-mode hr {
+  border: 1px solid #028dff;
+}
+.dark-mode p {
+  color: #ebf4f1;
+}
+.dark-mode a {
+  color: #7044e7;
+}
+.dark-mode a:hover {
+  color: #625fff;
+}
+.dark-mode .navbar a {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #5f5f56;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.dark-mode h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f1e7d0;
+}
+.dark-mode .card {
+  background-color: #f1e7d0;
+}
+.sepia-mode body {
+  background-color: #f1e7d0;
+  color: #433422;
+}
+.sepia-mode .card {
+  background-color: #f1e7d0;
+}
+.sepia-mode h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2e2d29;
+}
 </style>
