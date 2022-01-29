@@ -155,6 +155,7 @@ export default {
         href: '/icons/Icon-512x512.png',
       },
       { rel: 'dns-prefetch', href: 'https://identity.netlify.com' },
+      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
     ],
   },
   loading: { color: '#e84b0d' },
@@ -173,6 +174,7 @@ export default {
     '@nuxtjs/google-fonts',
     '@nuxtjs/color-mode',
     '@nuxt/image',
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -300,6 +302,9 @@ export default {
       type,
       create: createFeedArticles,
     }))
+  },
+  googleAnalytics: {
+    id: 'UA-67506568-29',
   },
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
