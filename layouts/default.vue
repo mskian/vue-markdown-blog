@@ -424,4 +424,54 @@ h5,
 h6 {
   color: #2e2d29;
 }
+.input-box,
+textarea,
+.sign-button {
+  width: 45rem !important;
+  min-height: 3rem;
+}
+button {
+  max-width: 100%;
+}
+.sign-button {
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 12px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
+}
+.input {
+  display: flex;
+  flex-grow: 0.3;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 32px;
+  padding: 23px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
+}
+.notification-more {
+  background-color: #f1354e;
+  color: rgb(204, 185, 185);
+}
+.read-more {
+  display: flex;
+  flex-grow: 0.3;
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  padding: 35px;
+  text-align: center;
+  justify-content: center;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
+}
 </style>

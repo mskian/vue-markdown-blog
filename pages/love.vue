@@ -1,0 +1,212 @@
+<template>
+  <section class="section">
+    <div class="container post-content">
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="notification is-warning has-text-weight-bold">
+            <h3 class="has-text-centered">காதலர் தினம் க்ரீட்டிங்ஸ் ❤</h3>
+            <br />
+            <p class="has-text-centered has-text-dark">
+              💚 {{ wishername }} 💚
+            </p>
+            <hr />
+            <div class="notification-more has-text-weight-bold read-more">
+              <p class="has-text-white">
+                எனக்காக <br />
+                துடிக்க உன்னிதயம் <br />
+                இருக்கென்ற <br />
+                நினைப்பிலேயே <br />
+                என்னிதயம் <br />
+                சீராக துடித்து <br />
+                கொண்டிருக்கு
+              </p>
+            </div>
+            <hr />
+            <h3 class="has-text-centered">create யுவர் ஓன் 💚</h3>
+            <br />
+            <form method="get">
+              <div class="control">
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  class="input has-text-centered"
+                  placeholder="Enter his or Her Name"
+                  required
+                />
+              </div>
+              <br />
+              <div class="control">
+                <button
+                  type="submit"
+                  class="button is-link read-random sign-button"
+                >
+                  Create wish
+                </button>
+              </div>
+            </form>
+            <br />
+          </div>
+          <br />
+          <div class="has-text-centered">
+            <p class="has-text-centered">
+              <small
+                ><b>Theme Mode: {{ $colorMode.value }}</b></small
+              >
+            </p>
+            <div class="select is-rounded is-link is-small">
+              <select v-model="$colorMode.preference">
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="sepia">Sepia</option>
+              </select>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+import slugify from 'slugify'
+
+export default {
+  name: 'WishPage',
+  data() {
+    return {
+      wishername: '',
+    }
+  },
+  head() {
+    return {
+      title: '❤ ' + this.wishername + ' காதலர் தினம் க்ரீட்டிங்ஸ்',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            '❤ ' +
+            this.wishername +
+            ' காதலர் தினம் க்ரீட்டிங்ஸ் - தமிழ் கவிதைகள் Site.',
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: '❤ ' + this.wishername + ' காதலர் தினம் க்ரீட்டிங்ஸ்',
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content:
+            '❤ ' +
+            this.wishername +
+            ' காதலர் தினம் க்ரீட்டிங்ஸ் - தமிழ் கவிதைகள் Site.',
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://kavithai.site/love/?name=' + this.$route.query.name,
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: '❤ ' + this.wishername + ' காதலர் தினம் க்ரீட்டிங்ஸ்',
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content:
+            '❤ ' +
+            this.wishername +
+            ' காதலர் தினம் க்ரீட்டிங்ஸ் - தமிழ் கவிதைகள் Site.',
+        },
+        {
+          hid: 'twitter:url',
+          name: 'twitter:url',
+          content: 'https://kavithai.site/love/?name=' + this.$route.query.name,
+        },
+      ],
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://kavithai.site/love/?name=' + this.$route.query.name,
+        },
+      ],
+      script: [
+        {
+          type: 'application/ld+json',
+          json: {
+            '@context': 'http://schema.org',
+            '@type': 'Website',
+            publisher: {
+              '@type': 'Organization',
+              name: '❤ ' + this.wishername + ' காதலர் தினம் க்ரீட்டிங்ஸ்',
+              url: 'https://kavithai.site/love/?name=' + this.$route.query.name,
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://kavithai.site/icons/Icon-72x72.png',
+                width: 72,
+                height: 72,
+              },
+            },
+            url: 'https://kavithai.site/love/?name=' + this.$route.query.name,
+            image: {
+              '@type': 'ImageObject',
+              url: 'https://kavithai.site/kavithai-cover.png',
+              width: 1200,
+              height: 630,
+            },
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id':
+                'https://kavithai.site/love/?name=' + this.$route.query.name,
+            },
+            description:
+              '❤ ' +
+              this.wishername +
+              ' காதலர் தினம் க்ரீட்டிங்ஸ் - தமிழ் கவிதைகள் Site.',
+          },
+        },
+      ],
+    }
+  },
+  beforeMount() {
+    this.getResult()
+  },
+  created() {
+    const getUser = this.$route.query.name
+    if (getUser == null) {
+      this.$router.push({
+        path: '/love/',
+        query: { name: 'Greetings' },
+      })
+    } else {
+      const users = slugify(getUser, {
+        replacement: '-',
+        remove: /[*+~.()'"!:@]/g,
+        lower: false,
+        strict: false,
+      })
+      this.$router.push({
+        path: '/love/',
+        query: { name: users },
+      })
+    }
+  },
+  methods: {
+    getResult() {
+      if (
+        this.$route.query.name === 'Greetings' ||
+        this.$route.query.name === undefined
+      ) {
+        this.wishername = 'Greetings'
+      } else {
+        this.wishername = this.$route.query.name.replace(/[-]/g, ' ')
+      }
+    },
+  },
+}
+</script>
