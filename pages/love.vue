@@ -9,17 +9,17 @@
             <p class="has-text-centered has-text-dark">
               💚 {{ wishername }} 💚
             </p>
+            <br />
+            <img :src="wishimage" loading="lazy" />
             <hr />
-            <div class="notification-more has-text-weight-bold read-more">
-              <p class="has-text-white">
-                எனக்காக <br />
-                துடிக்க உன்னிதயம் <br />
-                இருக்கென்ற <br />
-                நினைப்பிலேயே <br />
-                என்னிதயம் <br />
-                சீராக துடித்து <br />
-                கொண்டிருக்கு
-              </p>
+            <div class="buttons is-centered">
+              <a
+                class="button is-link is-rounded text-center"
+                :href="wishimage"
+                rel="nofollow noopener noreferrer"
+                target="_blank"
+                >📥 Download image</a
+              >
             </div>
             <hr />
             <h3 class="has-text-centered">create யுவர் ஓன் 💚</h3>
@@ -31,7 +31,9 @@
                   name="name"
                   type="text"
                   class="input has-text-centered"
-                  placeholder="Enter his or Her Name"
+                  placeholder="Enter Your Name"
+                  maxlength="17"
+                  autocomplete="off"
                   required
                 />
               </div>
@@ -78,6 +80,7 @@ export default {
   data() {
     return {
       wishername: '',
+      wishimage: '',
     }
   },
   head() {
@@ -173,15 +176,16 @@ export default {
       ],
     }
   },
-  beforeMount() {
+  mounted() {
     this.getResult()
   },
   created() {
     const getUser = this.$route.query.name
-    if (getUser == null) {
+    if (getUser === null || getUser === undefined) {
       this.$router.push({
+        force: true,
         path: '/love/',
-        query: { name: 'Greetings' },
+        query: { name: 'Your Name' },
       })
     } else {
       const users = slugify(getUser, {
@@ -203,8 +207,11 @@ export default {
         this.$route.query.name === undefined
       ) {
         this.wishername = 'Greetings'
+        this.wishimage = 'https://img.sanweb.info/love/love?name=Greetings'
       } else {
         this.wishername = this.$route.query.name.replace(/[-]/g, ' ')
+        this.wishimage =
+          'https://img.sanweb.info/love/love?name=' + this.wishername
       }
     },
   },

@@ -156,6 +156,7 @@ export default {
       },
       { rel: 'dns-prefetch', href: 'https://identity.netlify.com' },
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+      { rel: 'dns-prefetch', href: 'https://img.sanweb.info' },
     ],
   },
   loading: { color: '#e84b0d' },
