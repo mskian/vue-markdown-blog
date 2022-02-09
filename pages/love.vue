@@ -22,7 +22,7 @@
               >
             </div>
             <hr />
-            <h3 class="has-text-centered">create யுவர் ஓன் 💚</h3>
+            <h3 class="has-text-centered">create யுவர் Wish 💚</h3>
             <br />
             <form method="get">
               <div class="control">
@@ -32,7 +32,7 @@
                   type="text"
                   class="input has-text-centered"
                   placeholder="Enter Your Name"
-                  maxlength="17"
+                  maxlength="35"
                   autocomplete="off"
                   required
                 />
