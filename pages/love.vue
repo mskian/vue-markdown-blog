@@ -6,11 +6,22 @@
           <div class="notification is-warning has-text-weight-bold">
             <h3 class="has-text-centered">காதலர் தினம் க்ரீட்டிங்ஸ் ❤</h3>
             <br />
-            <p class="has-text-centered has-text-dark">
-              💚 {{ wishername }} 💚
+            <p v-if="wishername === 0" class="has-text-centered has-text-dark">
+              💚 Your Name 💚
+            </p>
+            <p v-else class="has-text-centered has-text-dark">
+              {{ wishername }}
             </p>
             <br />
-            <img :src="wishimage" loading="lazy" />
+            <div v-if="wishimage === 0">
+              <img
+                src="https://img.sanweb.info/love/love?name=Your%20Name"
+                loading="lazy"
+              />
+            </div>
+            <div v-else>
+              <img :src="wishimage" loading="lazy" />
+            </div>
             <hr />
             <div class="buttons is-centered">
               <a
@@ -185,7 +196,7 @@ export default {
       this.$router.push({
         force: true,
         path: '/love/',
-        query: { name: 'Your Name' },
+        query: { name: 'Your-Name' },
       })
     } else {
       const users = slugify(getUser, {
@@ -203,11 +214,11 @@ export default {
   methods: {
     getResult() {
       if (
-        this.$route.query.name === 'Greetings' ||
+        this.$route.query.name === 'Your-Name' ||
         this.$route.query.name === undefined
       ) {
-        this.wishername = 'Greetings'
-        this.wishimage = 'https://img.sanweb.info/love/love?name=Greetings'
+        this.wishername = 'Your Name'
+        this.wishimage = 'https://img.sanweb.info/love/love?name=Your%20Name'
       } else {
         this.wishername = this.$route.query.name.replace(/[-]/g, ' ')
         this.wishimage =
