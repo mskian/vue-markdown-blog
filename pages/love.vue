@@ -6,14 +6,17 @@
           <div class="notification is-warning has-text-weight-bold">
             <h3 class="has-text-centered">காதலர் தினம் க்ரீட்டிங்ஸ் ❤</h3>
             <br />
-            <p v-if="wishername === 0" class="has-text-centered has-text-dark">
+            <p
+              v-if="wishername === 'Your Name'"
+              class="has-text-centered has-text-dark"
+            >
               💚 Your Name 💚
             </p>
             <p v-else class="has-text-centered has-text-dark">
-              {{ wishername }}
+              {{ '💚 ' + wishername + ' 💚' }}
             </p>
             <br />
-            <div v-if="wishimage === 0">
+            <div v-if="wishername === 'Your Name'">
               <img
                 src="https://img.sanweb.info/love/love?name=Your%20Name"
                 loading="lazy"
@@ -222,7 +225,8 @@ export default {
       } else {
         this.wishername = this.$route.query.name.replace(/[-]/g, ' ')
         this.wishimage =
-          'https://img.sanweb.info/love/love?name=' + this.wishername
+          'https://img.sanweb.info/love/love?name=' +
+          encodeURIComponent(this.wishername)
       }
     },
   },
