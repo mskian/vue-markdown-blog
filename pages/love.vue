@@ -25,8 +25,10 @@
             <div v-else>
               <img :src="wishimage" loading="lazy" />
             </div>
-            <hr />
-            <div class="buttons is-centered">
+            <div v-if="wishername === 'Your Name'">
+              <br />
+            </div>
+            <div v-else class="buttons is-centered">
               <a
                 class="button is-link is-rounded text-center"
                 :href="wishimage"
@@ -52,8 +54,8 @@
                   📝 Copy Url
                 </button>
               </p>
+              <br />
             </div>
-            <hr />
             <h3 class="has-text-centered">create யுவர் Wish 💚</h3>
             <br />
             <form method="get">
@@ -216,9 +218,9 @@ export default {
     const getUser = this.$route.query.name
     if (getUser === null || getUser === undefined) {
       this.$router.push({
-        force: true,
         path: '/love/',
         query: { name: 'Your-Name' },
+        force: true,
       })
     } else {
       const users = slugify(getUser, {
@@ -230,6 +232,7 @@ export default {
       this.$router.push({
         path: '/love/',
         query: { name: users },
+        force: true,
       })
     }
   },
