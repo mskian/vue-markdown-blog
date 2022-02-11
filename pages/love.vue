@@ -34,6 +34,24 @@
                 target="_blank"
                 >📥 Download image</a
               >
+              <br />
+              <br />
+              <p
+                class="notification is-danger is-light has-text-centered has-text-dark"
+              >
+                <small
+                  >Copy Greeting URL and Share it your Lovable Partner</small
+                ><br />
+                <button
+                  v-clipboard:copy="copyurl"
+                  v-clipboard:success="onCopy"
+                  v-clipboard:error="onError"
+                  class="button is-danger is-rounded text-center"
+                  type="button"
+                >
+                  📝 Copy Url
+                </button>
+              </p>
             </div>
             <hr />
             <h3 class="has-text-centered">create யுவர் Wish 💚</h3>
@@ -95,6 +113,7 @@ export default {
     return {
       wishername: '',
       wishimage: '',
+      copyurl: '',
     }
   },
   head() {
@@ -222,12 +241,36 @@ export default {
       ) {
         this.wishername = 'Your Name'
         this.wishimage = 'https://img.sanweb.info/love/love?name=Your%20Name'
+        this.copyurl = 'https://kavithai.site/love/?name=Your-Name'
       } else {
         this.wishername = this.$route.query.name.replace(/[-]/g, ' ')
         this.wishimage =
           'https://img.sanweb.info/love/love?name=' +
           encodeURIComponent(this.wishername)
+        this.copyurl =
+          'https://kavithai.site/love/?name=' +
+          slugify(this.$route.query.name, {
+            replacement: '-',
+            remove: /[*+~.()'"!:@]/g,
+            lower: false,
+            strict: false,
+          })
+        this.$toast.error(this.wishername, {
+          position: 'bottom-right',
+          theme: 'bubble',
+          duration: 900,
+        })
       }
+    },
+    onCopy(e) {
+      this.$toast.success('URL Copied', {
+        duration: 500,
+      })
+    },
+    onError(e) {
+      this.$toast.error('Error', {
+        duration: 500,
+      })
     },
   },
 }

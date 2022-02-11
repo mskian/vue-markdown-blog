@@ -157,6 +157,16 @@ export default {
       { rel: 'dns-prefetch', href: 'https://identity.netlify.com' },
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
       { rel: 'dns-prefetch', href: 'https://img.sanweb.info' },
+      { rel: 'dns-prefetch', href: 'https://hulu.sanweb.info' },
+    ],
+    script: [
+      {
+        async: true,
+        defer: true,
+        'data-website-id': 'e981ef76-97a6-478b-8d54-64103c9fabbe',
+        src: 'https://hulu.sanweb.info/umami.js',
+        'data-domains': 'kavithai.site',
+      },
     ],
   },
   loading: { color: '#e84b0d' },
@@ -185,6 +195,8 @@ export default {
     '@nuxt/content',
     '@nuxtjs/feed',
     '@nuxtjs/sitemap',
+    'nuxt-clipboard',
+    '@nuxtjs/toast',
   ],
   buefy: {
     materialDesignIcons: false,
