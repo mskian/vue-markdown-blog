@@ -40,7 +40,7 @@
                 class="notification is-danger is-light has-text-centered has-text-dark"
               >
                 <small
-                  >Copy Greeting URL and Share it your Lovable Partner</small
+                  >Copy Greeting URL and Share to your Lovable Partner</small
                 ><br />
                 <button
                   v-clipboard:copy="copyurl"
