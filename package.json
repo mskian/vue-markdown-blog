@@ -37,7 +37,7 @@
     "@nuxtjs/toast": "^3.3.1",
     "core-js": "^3.21.1",
     "nuxt": "^2.15.8",
-    "nuxt-buefy": "^0.4.18",
+    "nuxt-buefy": "^0.4.21",
     "nuxt-clipboard": "^0.0.7",
     "slugify": "^1.6.5",
     "vue": "^2.6.14",
