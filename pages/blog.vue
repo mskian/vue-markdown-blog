@@ -77,7 +77,7 @@ export default {
         {
           hid: 'og:url',
           name: 'og:url',
-          content: 'https://kavithai.site' + this.$route.path,
+          content: 'https://kavithai.site' + this.$route.path + '/',
         },
         {
           hid: 'twitter:title',
@@ -87,13 +87,13 @@ export default {
         {
           hid: 'twitter:url',
           name: 'twitter:url',
-          content: 'https://kavithai.site' + this.$route.path,
+          content: 'https://kavithai.site' + this.$route.path + '/',
         },
       ],
       link: [
         {
           rel: 'canonical',
-          href: 'https://kavithai.site' + this.$route.path,
+          href: 'https://kavithai.site' + this.$route.path + '/',
         },
       ],
       script: [
@@ -105,7 +105,7 @@ export default {
             publisher: {
               '@type': 'Organization',
               name: 'Blog - தமிழ் கவிதை Site 💚',
-              url: 'https://kavithai.site' + this.$route.path,
+              url: 'https://kavithai.site' + this.$route.path + '/',
               logo: {
                 '@type': 'ImageObject',
                 url: 'https://kavithai.site/icons/Icon-72x72.png',
@@ -113,7 +113,7 @@ export default {
                 height: 72,
               },
             },
-            url: 'https://kavithai.site' + this.$route.path,
+            url: 'https://kavithai.site' + this.$route.path + '/',
             image: {
               '@type': 'ImageObject',
               url: 'https://kavithai.site/kavithai-cover.png',
@@ -122,7 +122,7 @@ export default {
             },
             mainEntityOfPage: {
               '@type': 'WebPage',
-              '@id': 'https://kavithai.site' + this.$route.path,
+              '@id': 'https://kavithai.site' + this.$route.path + '/',
             },
             description:
               'தமிழ் கவிதைகள் Site - Collect kavithai Around Social Media and Social Pages - Read Tamil Kavithai both online and offline.',

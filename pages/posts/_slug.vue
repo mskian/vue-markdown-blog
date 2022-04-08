@@ -91,7 +91,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content: 'https://kavithai.site' + this.$route.path,
+          content: 'https://kavithai.site' + this.$route.path + '/',
         },
         {
           hid: 'twitter:title',
@@ -111,13 +111,13 @@ export default {
         {
           hid: 'twitter:url',
           name: 'twitter:url',
-          content: 'https://kavithai.site' + this.$route.path,
+          content: 'https://kavithai.site' + this.$route.path + '/',
         },
       ],
       link: [
         {
           rel: 'canonical',
-          href: 'https://kavithai.site' + this.$route.path,
+          href: 'https://kavithai.site' + this.$route.path + '/',
         },
       ],
       script: [
@@ -129,7 +129,7 @@ export default {
             publisher: {
               '@type': 'Organization',
               name: 'Tamil Kavithai Site',
-              url: 'https://kavithai.site' + this.$route.path,
+              url: 'https://kavithai.site' + this.$route.path + '/',
               logo: {
                 '@type': 'ImageObject',
                 url: 'https://kavithai.site/icons/Icon-72x72.png',
@@ -152,7 +152,7 @@ export default {
               ],
             },
             headline: this.article.title,
-            url: 'https://kavithai.site' + this.$route.path,
+            url: 'https://kavithai.site' + this.$route.path + '/',
             datePublished: this.article.createdAt,
             dateModified: this.article.updatedAt,
             image: {
@@ -164,7 +164,7 @@ export default {
             keywords: this.article.tags,
             mainEntityOfPage: {
               '@type': 'WebPage',
-              '@id': 'https://kavithai.site' + this.$route.path,
+              '@id': 'https://kavithai.site' + this.$route.path + '/',
             },
             description: this.article.description,
           },

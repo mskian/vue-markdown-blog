@@ -90,7 +90,7 @@ export default {
         {
           hid: 'og:url',
           name: 'og:url',
-          content: 'https://kavithai.site' + this.$route.path,
+          content: 'https://kavithai.site' + this.$route.path + '/',
         },
         {
           hid: 'twitter:title',
@@ -100,13 +100,13 @@ export default {
         {
           hid: 'twitter:url',
           name: 'twitter:url',
-          content: 'https://kavithai.site' + this.$route.path,
+          content: 'https://kavithai.site' + this.$route.path + '/',
         },
       ],
       link: [
         {
           rel: 'canonical',
-          href: 'https://kavithai.site' + this.$route.path,
+          href: 'https://kavithai.site' + this.$route.path + '/',
         },
       ],
     }
