@@ -154,7 +154,6 @@ export default {
         sizes: '512x512',
         href: '/icons/Icon-512x512.png',
       },
-      { rel: 'dns-prefetch', href: 'https://identity.netlify.com' },
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
       { rel: 'dns-prefetch', href: 'https://img.sanweb.info' },
       { rel: 'dns-prefetch', href: 'https://hulu.sanweb.info' },

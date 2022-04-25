@@ -54,13 +54,6 @@ export default {
       showNavbar: true,
     }
   },
-  head() {
-    return {
-      script: [
-        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
-      ],
-    }
-  },
   mounted() {
     /* eslint-disable no-console */
     console.log(
