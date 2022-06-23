@@ -163,7 +163,7 @@ export default {
         async: true,
         defer: true,
         'data-website-id': 'e981ef76-97a6-478b-8d54-64103c9fabbe',
-        src: 'https://hulu.sanweb.info/umami.js',
+        src: 'https://hulu.sanweb.info/script.js',
         'data-domains': 'kavithai.site',
       },
     ],
