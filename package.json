@@ -47,7 +47,7 @@
     "webpack": "^5.73.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.18.2",
+    "@babel/eslint-parser": "^7.18.9",
     "@nuxt/image": "^0.7.1",
     "@nuxtjs/color-mode": "^2.1.1",
     "@nuxtjs/eslint-config": "^8.0.0",
