@@ -40,9 +40,9 @@
     "nuxt-buefy": "^0.4.23",
     "nuxt-clipboard": "^0.0.7",
     "slugify": "^1.6.5",
-    "vue": "^2.6.14",
-    "vue-server-renderer": "^2.6.14",
-    "vue-template-compiler": "^2.6.14",
+    "vue": "^2.7.8",
+    "vue-server-renderer": "^2.7.8",
+    "vue-template-compiler": "^2.7.8",
     "vue-unicons": "^3.3.1",
     "webpack": "^5.74.0"
   },
